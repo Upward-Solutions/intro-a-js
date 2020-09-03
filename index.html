@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/styles.css"/>
+
+        <!-- Me importo mi archivo JS con sus respectivas funciones -->
+        <script src="js/functions.js"></script>
+
+        <title>Javascript</title>
+        <script>
+            function mostrarMensaje(){
+               alert("Bienvenidos a mi web")
+            }
+        </script>
+    </head>
+
+    <body id="body">
+        <h1 id="title">Introduccion a js</h1>
+
+        <p onfocus="cambiarParrafo()"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam iure nostrum ab vitae officiis earum 
+            accusantium nobis aspernatur praesentium, dolore natus quod cumque soluta optio cupiditate pariatur? 
+            Consectetur, pariatur sunt? </p>
+
+        <button type="button" onclick="mostrarMensaje()">Pinchame</button>
+        <button type="button" onclick="agregarParrafo()">Agregar parrafo</button>
+
+        <br><br>
+
+        <h3>Contacto</h3>
+        <form>
+            <label>Nombre</label>
+            <input type="text" id="name" onchange="validarNombre()">
+            <br><br>
+            <label>Edad</label>
+            <input type="text" id="edad">
+            <br><br>
+            <label>Mensaje</label>
+            <br>
+            <textarea id="mensaje" rows="10" cols="50" placeholder="Write your message here" id="mensaje" onkeypress="validarMensaje()"></textarea>
+            <p id="mensajeValidacion"> </p>
+            <button type="button" onclick="validarFormulario()">Enviar</button>
+        </form>
+    </body>
+</html>
